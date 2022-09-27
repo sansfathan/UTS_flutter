@@ -63,7 +63,7 @@ class _DetailDzikirState extends State<DetailDzikir> {
       ),
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.only(right: 10),
+           
             width: double.infinity,
             decoration: BoxDecoration(
                 gradient: LinearGradient(begin: Alignment.topCenter, colors: [
@@ -76,6 +76,7 @@ class _DetailDzikirState extends State<DetailDzikir> {
               child: Row(
                   children: List.generate(_dzikirData.length, (index) {
                 return Container(
+                  margin: EdgeInsets.only(right:5,left:5),
                   width: MediaQuery.of(context).size.width * 1,
                   height: MediaQuery.of(context).size.height * 0.9,
                   // // ignore: prefer_const_constructors
@@ -92,11 +93,11 @@ class _DetailDzikirState extends State<DetailDzikir> {
                           bottomRight: Radius.circular(50))),
                   child: Column(
                     children: [
-                      
-                      Padding(padding: EdgeInsets.symmetric(vertical: 12,horizontal: 10)),
-                      
+                      Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 15, horizontal: 20)),
                       Container(
-                        margin: EdgeInsets.only(bottom: 10),
+                        
                         child: Text(
                           "Dzkir ke ${index + 1}",
                           style: TextStyle(fontSize: 20),
@@ -109,7 +110,7 @@ class _DetailDzikirState extends State<DetailDzikir> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(bottom: 30,top: 10),
+                        margin: EdgeInsets.only(bottom: 30, top: 10),
                         child: Text(
                           "Di baca ${_dzikirData[index].diBaca}",
                           style: TextStyle(
@@ -119,7 +120,6 @@ class _DetailDzikirState extends State<DetailDzikir> {
                       Container(
                         margin: EdgeInsets.only(bottom: 20),
                         child: Text(
-                          
                           _dzikirData[index].bacaanArab,
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.w600),
